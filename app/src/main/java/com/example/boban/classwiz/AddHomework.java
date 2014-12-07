@@ -17,6 +17,8 @@ import android.widget.ListView;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+//TODO Google Calendar API
+
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -220,11 +222,12 @@ public class AddHomework extends ActionBarActivity {
                             Toast.makeText(AddHomework.this, "Cannot leave fields blank", Toast.LENGTH_SHORT).show();
                         } else{
                             Toast.makeText(AddHomework.this, "Assignment Added", Toast.LENGTH_SHORT).show();
+                            //TODO Create Google Calendar Event
                         }
                     }
 
                 } catch (ParseException e) {
-                    // TODO Auto-generated catch block
+
                     e.printStackTrace();
                     Toast.makeText(AddHomework.this, "Something went wrong please try again.", Toast.LENGTH_SHORT).show();
                 }
