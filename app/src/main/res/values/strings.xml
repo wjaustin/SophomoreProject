@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">classWiz</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="drawer_open">Drawer Opened</string>
+    <string name="drawer_close">Drawer Closed</string>
+
+    <string-array name="drawer_list">
+        <item>Upcoming Homework</item>
+        <item>Add Homework</item>
+    </string-array>
+
+    <string name="title_activity_add_homework">AddHomework</string>
+
+</resources>
