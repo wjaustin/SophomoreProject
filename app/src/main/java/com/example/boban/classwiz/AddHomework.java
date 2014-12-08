@@ -19,13 +19,13 @@ import android.widget.ListView;
 import android.widget.Spinner;
 import android.widget.Toast;
 
-//TODO Google Calendar API
-//import com.google.api.services.*;
-
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.GregorianCalendar;
+
+//TODO Google Calendar API
+//import com.google.api.services.*;
 
 
 public class AddHomework extends ActionBarActivity {
@@ -39,7 +39,6 @@ public class AddHomework extends ActionBarActivity {
     private Button addAssignment;
     private String h, min, mon, d, y;
 
-    public double[] hours, minutes;
 
 
     @Override
@@ -47,7 +46,7 @@ public class AddHomework extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_homework);
 
-        //XML TO JAVA
+        //Assigning Java Counterparts
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer);
         mDrawerList = (ListView) findViewById(android.R.id.list);
@@ -58,14 +57,15 @@ public class AddHomework extends ActionBarActivity {
         mDrawerList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                int editedPosition = position + 1;
-                Toast.makeText(AddHomework.this, "You selected item " + editedPosition, Toast.LENGTH_SHORT).show();
                 switch (position) {
                     case 0:
                         startActivity(new Intent(AddHomework.this, MainActivity.class));
                         break;
                     case 1:
                         startActivity(new Intent(AddHomework.this, AddHomework.class));
+                        break;
+                    case 2:
+                        startActivity(new Intent(AddHomework.this, MoodleLogin.class));
                         break;
                 }
                 mDrawerLayout.closeDrawer(mDrawerList);
@@ -94,10 +94,11 @@ public class AddHomework extends ActionBarActivity {
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setHomeButtonEnabled(true);
+
         //Assignment Name/Info
         assignmentName = (EditText) findViewById(R.id.assignmentName);
 
-        //SPINNERS =D
+        //Spinners
         //Month
         month = (Spinner) findViewById(R.id.month);
         String[] monthArray = new String[12];

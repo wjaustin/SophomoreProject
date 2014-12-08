@@ -10,8 +10,11 @@
     <string-array name="drawer_list">
         <item>Upcoming Homework</item>
         <item>Add Homework</item>
+        <item>Moodle Login</item>
     </string-array>
 
-    <string name="title_activity_add_homework">AddHomework</string>
+    <string name="title_activity_add_homework">Add Homework</string>
+    <string name="title_activity_moodle_login">MoodleLogin</string>
+    <string name="title_activity_moodle">MoodleActivity</string>
 
 </resources>

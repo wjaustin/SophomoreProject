@@ -12,7 +12,6 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
-import android.widget.Toast;
 
 public class MainActivity extends ActionBarActivity {
 
@@ -34,14 +33,15 @@ public class MainActivity extends ActionBarActivity {
         mDrawerList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                int editedPosition = position + 1;
-                Toast.makeText(MainActivity.this, "You selected item " + editedPosition, Toast.LENGTH_SHORT).show();
                 switch (position) {
                     case 0:
                         startActivity(new Intent(MainActivity.this, MainActivity.class));
                         break;
                     case 1:
                         startActivity(new Intent(MainActivity.this, AddHomework.class));
+                        break;
+                    case 2:
+                        startActivity(new Intent(MainActivity.this, MoodleLogin.class));
                         break;
                 }
                 mDrawerLayout.closeDrawer(mDrawerList);
