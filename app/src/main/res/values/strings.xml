@@ -16,5 +16,8 @@
     <string name="title_activity_add_homework">Add Homework</string>
     <string name="title_activity_moodle_login">MoodleLogin</string>
     <string name="title_activity_moodle">MoodleActivity</string>
+    <string name="title_activity_test_scroll">TestScroll</string>
+    <string name="title_activity_clear_saved_information">Clear Saved Information</string>
+    <string name="title_activity_clear_stored">ClearStored</string>
 
 </resources>

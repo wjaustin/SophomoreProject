@@ -19,87 +19,94 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <FrameLayout
-            android:id="@+id/content_frame"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+        <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:fillViewport="true">
 
-            <TextView
+            <FrameLayout
+                android:id="@+id/content_frame"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:gravity="center"
-                android:text="Moodle Login"
-                android:textAppearance="?android:textAppearanceLarge"
-                android:textSize="24dp" />
-
-
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="16dp"
-                android:layout_marginRight="16dp"
-                android:layout_marginTop="64dp"
-                android:background="#d5d5d5"
-                android:minHeight="?android:attr/listPreferredItemHeight">
+                android:layout_height="match_parent"
+                android:scrollbars="vertical">
 
                 <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
                     android:gravity="center"
-                    android:text="Username"
-                    android:textAppearance="?android:textAppearanceMedium" />
-
-                <EditText
-                    android:id="@+id/username"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:inputType="text"
-                    android:textSize="16sp" />
-
-            </TableRow>
-
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="16dp"
-                android:layout_marginRight="16dp"
-                android:layout_marginTop="160dp"
-                android:background="#d5d5d5"
-                android:minHeight="?android:attr/listPreferredItemHeight">
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:text="Password"
-                    android:textAppearance="?android:textAppearanceMedium" />
-
-                <EditText
-                    android:id="@+id/password"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:inputType="textWebPassword"
-                    android:textSize="16sp" />
+                    android:text="Moodle Login"
+                    android:textAppearance="?android:textAppearanceLarge"
+                    android:textSize="24dp" />
 
 
-            </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginTop="64dp"
+                    android:background="#d5d5d5"
+                    android:minHeight="?android:attr/listPreferredItemHeight">
 
-            <Button
-                android:id="@+id/addAssignment"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="32dp"
-                android:layout_marginRight="32dp"
-                android:layout_marginTop="368dp"
-                android:minHeight="?android:attr/listPreferredItemHeight"
-                android:text="Login" />
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="Username"
+                        android:textAppearance="?android:textAppearanceMedium" />
 
-        </FrameLayout>
+                    <EditText
+                        android:id="@+id/username"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:inputType="text"
+                        android:textSize="16sp" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginTop="160dp"
+                    android:background="#d5d5d5"
+                    android:minHeight="?android:attr/listPreferredItemHeight">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="Password"
+                        android:textAppearance="?android:textAppearanceMedium" />
+
+                    <EditText
+                        android:id="@+id/password"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:inputType="textWebPassword"
+                        android:textSize="16sp" />
+
+
+                </TableRow>
+
+                <Button
+                    android:id="@+id/addAssignment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="32dp"
+                    android:layout_marginRight="32dp"
+                    android:layout_marginTop="368dp"
+                    android:minHeight="?android:attr/listPreferredItemHeight"
+                    android:text="Login" />
+
+            </FrameLayout>
+        </ScrollView>
 
         <ListView
             android:id="@android:id/list"
