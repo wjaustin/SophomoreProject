@@ -1,8 +1,6 @@
 package com.example.boban.classwiz;
 
-/**
- * Created by wjaau_000 on 12/9/2014.
- */
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
@@ -30,7 +28,6 @@ public class JSONParser {
     static JSONObject jObj = null;
     static String json = "";
 
-    // constructor
     public JSONParser() {
 
     }

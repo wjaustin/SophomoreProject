@@ -165,27 +165,7 @@ public class MoodleLogin extends ActionBarActivity {
                     VariableDB.setUsername(mContext, username.getText().toString());
                     Toast.makeText(mContext, txtName, Toast.LENGTH_LONG).show();
                     Toast.makeText(mContext, txtPrice, Toast.LENGTH_LONG).show();
-                    /*
-                    Toast.makeText(mContext, "Logging in", Toast.LENGTH_SHORT).show();
-                    HttpRequest GetCal = new HttpRequest();
-                    MoodleToken = "";
-                    try {
-                        Toast.makeText(mContext, "Calling Class...", Toast.LENGTH_SHORT).show();
-                        MoodleToken = GetCal.getData(username.getText().toString(), password.getText().toString());
-                        Toast.makeText(mContext, "Class called!", Toast.LENGTH_SHORT).show();
-                    } catch (Exception e) {
-                        Toast.makeText(mContext, "Error", Toast.LENGTH_SHORT).show();
-                        e.printStackTrace();
-                    }
-                    Toast.makeText(mContext, MoodleToken, Toast.LENGTH_LONG).show();
-                    */
-                    /*
-                    try {
-                        HTTPrequest();
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    }
-                    */
+
                 }
             }
         });
@@ -242,12 +222,6 @@ public class MoodleLogin extends ActionBarActivity {
 
                             // get first product object from JSON Array
                             JSONObject product = productObj.getJSONObject(0);
-
-                            // product with this pid found
-                            // Edit Text
-                            //txtName = (EditText) findViewById(R.id.inputName);
-                            //txtPrice = (EditText) findViewById(R.id.inputPrice);
-                            //txtDesc = (EditText) findViewById(R.id.inputDesc);
 
                             // display product data in EditText
                             txtName = (product.getString(TAG_NAME));
